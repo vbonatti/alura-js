@@ -1,0 +1,43 @@
+<meta charset="UTF-8">
+
+<input/>
+
+<button>Compare com o meu segredo</button>
+
+<script>//JS
+
+function verifica() {
+    
+    var achou = false;
+    
+    for(var posicao = 0; posicao < segredos.length; posicao++){//segredos.lenght pega o tamanho do array
+       
+        if(input.value == segredos[posicao]) {
+        
+            alert("VOCÊ ACERTOU!");
+            achou = true;
+            break;
+            }
+        }
+        if(achou == false){
+            alert("VOCÊ ERROU!");
+        }
+    
+    input.value = "";//LIMPA A CAIXA DE TEXTO
+    input.focus();
+}
+
+
+var segredos = [1,4,6,10];//DECLARANDO ARRAY
+
+var secret = 6;
+
+var input = document.querySelector("input");//SELECIONA TAG DO HTML
+
+var button = document.querySelector("button");
+input.focus();
+
+button.onclick = verifica; //SEM () para chamar a funçao no clique
+//com parenteses ele chama a função sem clicar
+
+</script>

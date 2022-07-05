@@ -1,0 +1,18 @@
+<canvas width="600" height="400"> </canvas>
+
+<script>
+
+    var tela = document.querySelector("canvas");//PEGA CANVAS DO MUNDO HTML
+
+    var pincel = tela.getContext("2d");//DEFINE O PINCEL
+
+    pincel.fillStyle = "darkGreen";//PARA ESCOLHER COR DO PINCEL
+    pincel.fillRect(0 , 0, 400, 600);//ESCOLHER O QUE VAI PINTAR NO CASO UM RETANGULO
+
+    pincel.fillStyle = "black";//PARA ESCOLHER COR DO PINCEL
+    pincel.fillRect(100 , 75, 40, 40);//ESCOLHER O QUE VAI PINTAR NO CASO UM RETANGULO
+
+    pincel.fillStyle = "black";//PARA ESCOLHER COR DO PINCEL
+    pincel.fillRect(250 , 75, 40, 40);//ESCOLHER O QUE VAI PINTAR NO CASO UM RETANGULO
+    
+</script>

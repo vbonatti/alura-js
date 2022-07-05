@@ -1,0 +1,30 @@
+<meta charset="UTF-8">
+
+<script>
+
+function pulaLinha() {
+
+document.write("<br>");
+}
+
+function mostra(frase) {
+
+document.write(frase);
+pulaLinha();
+}
+
+//UTILIZANDO FOR 
+for(var multiplicador = 1; multiplicador <= 10; multiplicador++){
+    mostra(multiplicador * 7); 
+}
+
+//AGORA COM WHILE
+/*
+var multiplicador = 1;
+
+while(multiplicador <= 10){
+    mostra(multiplicador * 7);
+    multiplicador++;
+}*/
+
+</script>

@@ -1,0 +1,27 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    function calculaImc(peso , altura) {
+        var imc = peso / (altura * altura);
+        return Math.round(imc);//JÁ RETORNA ARREDONDADO
+    }
+
+    var imcVinicius = calculaImc(76 , 1.70);
+    var imcJuliana = calculaImc(54, 1.65);
+
+    //mostra("Imc do Vinicius = " + Math.round(imcVinicius)); //ARREDONDA NA CHAMADA
+    //mostra("Imc da Juliana é = " + Math.round(imcJuliana));
+    mostra(imcVinicius);//JÁ RETORNA ARREDONDADO
+    
+
+</script>

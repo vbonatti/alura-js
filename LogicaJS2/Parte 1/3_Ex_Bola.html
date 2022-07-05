@@ -1,0 +1,43 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+    //RETANGULO 1
+    pincel.fillStyle = 'lightgrey';
+    pincel.fillRect(0, 0, 600, 400);
+
+    //RETANGULO 2
+    pincel.fillStyle = 'green';
+    pincel.fillRect(0, 0, 200, 400);
+    
+    //RETANGULO 3
+    pincel.fillStyle = 'red';
+    pincel.fillRect(400, 0, 200, 400);
+
+    //TRIANGULO 1
+    pincel.fillStyle = 'yellow';
+    pincel.beginPath();
+    pincel.moveTo(300, 100);
+    pincel.lineTo(210, 300);
+    pincel.lineTo(390, 300);
+    //pincel.lineTo(100 , 200);
+    pincel.fill();
+
+    //TRIANGULO 2
+    pincel.fillStyle = "blue";
+    pincel.beginPath();
+    pincel.moveTo(300 , 250);
+    pincel.lineTo(210 , 100);
+    pincel.lineTo(390 , 100);
+    pincel.fill();
+
+    //BOLA - CIRCULO
+    pincel.fillStyle = "purple";//Define cor do pincel
+    pincel.beginPath();//define um novo caminho
+    pincel.arc(300 , 200 , 50 , 0 , 2 * 3.14);//definindo parametros do circulo
+    pincel.fill();//preenche a forma
+
+</script>

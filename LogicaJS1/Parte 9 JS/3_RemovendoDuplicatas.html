@@ -1,0 +1,75 @@
+<meta charset="UTF-8">
+
+<input/>
+
+<button>Compare com o meu segredo</button>
+
+<script>//JS
+
+function verifica() {
+    
+    var achou = false;
+    
+    for(var posicao = 0; posicao < segredos.length; posicao++){//segredos.lenght pega o tamanho do array
+       
+        if(input.value == segredos[posicao]) {
+        
+            alert("VOCÊ ACERTOU!");
+            achou = true;
+            break;
+            }
+        }
+        if(achou == false){
+            alert("VOCÊ ERROU!");
+        }
+    
+    input.value = "";//LIMPA A CAIXA DE TEXTO
+    input.focus();
+}
+
+function sorteia() {
+    return Math.round(Math.random() * 10);
+}
+
+function sorteiaNumero(quantidade) {
+    var segredos = [];
+
+    var numero = 1;
+
+    while(numero <= quantidade) {
+        
+        var numeroAleatorio = sorteia();
+
+        var achou = false;
+        
+        if(numeroAleatorio != 0){//NÃO DEIXA O NUMERO SER 0
+
+            for(var posicao = 0; posicao < segredos.length; posicao++) {
+
+            if(segredos[posicao] == numeroAleatorio) {
+                achou = true;
+                break;
+                }
+            }
+            if(achou == false) {
+            segredos.push(numeroAleatorio);
+            numero++;
+                }
+        }    
+    }
+    console.log(segredos);//MOSTRA O LOG NO CONSOLE PARA VERIFICAR EXECUÇÃO CORRETA
+    return segredos;
+}
+
+var segredos = sorteiaNumero(parseInt(prompt("Insira a quantidade de segredos:")));//CHAMANDO FUNCAO
+
+var input = document.querySelector("input");//SELECIONA TAG DO HTML
+
+var button = document.querySelector("button");
+
+input.focus();//PARA DAR FOCO NO BOTAO
+
+button.onclick = verifica; //SEM () para chamar a funçao no clique
+
+
+</script>

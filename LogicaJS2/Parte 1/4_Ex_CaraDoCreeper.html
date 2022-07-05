@@ -1,0 +1,64 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+    pincel.fillStyle = "darkGreen";
+    pincel.fillRect(0 , 0 ,350 , 300);
+
+    //retangulo 2 - olho
+    pincel.fillStyle = "black";
+    pincel.beginPath();
+    pincel.moveTo(90 , 90);
+    pincel.fillRect(45, 40, 90 ,90);
+
+    //retangulo 3 - olho
+    pincel.beginPath();
+    pincel.moveTo(90 , 90);
+    pincel.fillRect(205, 40, 90 ,90);
+    
+    //ret 4 - boca esquerda
+    pincel.beginPath();
+    pincel.moveTo(90 , 90);
+    pincel.fillRect(100, 183, 40 ,116);
+    
+        
+    //ret 4 - boca direita
+    pincel.beginPath();
+    pincel.moveTo(90 , 90);
+    pincel.fillRect(200, 183, 40 ,116);
+
+    //ret 5 - Nariz
+    pincel.beginPath();
+    pincel.moveTo(90 , 90);
+    pincel.fillRect(135, 130, 70 ,100);
+
+
+    //Instrutor
+
+    /*<canvas width="600" height="400"></canvas>
+
+<script>
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+    // cabeça
+    pincel.fillStyle = 'darkgreen';
+    pincel.fillRect(200,50,350,300);
+
+    // olhos
+    pincel.fillStyle = 'black';
+    pincel.fillRect(250, 110, 90, 90);
+    pincel.fillRect(410, 110, 90, 90);
+
+    // nariz
+    pincel.fillRect(340, 200, 70, 100);
+
+    // boca ou barba
+    pincel.fillRect(300, 240, 40, 110);
+    pincel.fillRect(410, 240, 40, 110);    
+*/
+</script>
+
